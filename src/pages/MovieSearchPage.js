@@ -31,7 +31,12 @@ class MovieSearchPage extends Component {
 
   render() {
     const { movieSearchPhrase } = this.state;
-    const { searchedMovies, searchError, totalResults } = this.props;
+    const {
+      searchedMovies,
+      searchError,
+      totalResults,
+      isSearchLoading
+    } = this.props;
     return (
       <div style={{ width: "calc(100% - 230px)", marginTop: "18px" }}>
         <Form
@@ -63,7 +68,6 @@ class MovieSearchPage extends Component {
             margin: "15px 0",
             width: "100%"
           }}
-          loader={<LoadingSpinner />}
           endMessage={
             totalResults ? (
               <p style={{ fontFamily: "HK Grotesk", textAlign: "center" }}>
@@ -78,7 +82,7 @@ class MovieSearchPage extends Component {
             searchedMovies.map((item, index) => (
               <MovieCard key={index} {...item} />
             ))}
-          {search}
+          {isSearchLoading && <LoadingSpinner />}
           {searchError && <span>{searchError}</span>}
         </InfiniteScroll>
       </div>
