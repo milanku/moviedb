@@ -1,0 +1,51 @@
+.container {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.poster {
+  width: 300px;
+}
+.infoBoard {
+  margin: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  > * {
+    font-family: "Roboto";
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+.genre {
+  font-style: italic;
+}
+
+.scores {
+  margin-left: -5px;
+}
+.scoresItem {
+  margin: 5px;
+  display: inline-block;
+
+  span {
+    display: block;
+    text-align: center;
+  }
+}
+.star {
+  cursor: pointer;
+
+  &.favourite {
+    color: gold;
+  }
+}

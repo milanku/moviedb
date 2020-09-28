@@ -1,0 +1,23 @@
+$font-color: black;
+
+.navContainer {
+  height: 100vh;
+  width: 220px;
+  margin-right: 20px;
+  padding-top: 20px;
+  background-color: #fafafa;
+}
+.selected {
+  background-color: #e8e8e8;
+  width: 150px;
+}
+.navItem {
+  width: 180px;
+  padding: 10px 13px;
+  margin: 0 20px;
+
+  color: $font-color;
+  &:hover {
+    color: $font-color;
+  }
+}
