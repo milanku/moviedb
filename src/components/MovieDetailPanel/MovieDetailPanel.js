@@ -26,7 +26,11 @@ class MovieDetailPanel extends Component {
 
     return (
       <div className={styles.container}>
-        <img className={styles.poster} src={Poster} />
+        <img
+          alt={`Movie poster of ${Title}`}
+          className={styles.poster}
+          src={Poster}
+        />
         <div className={styles.infoBoard}>
           <h1>
             {`${Title} (${Year})`}{" "}

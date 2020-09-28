@@ -8,7 +8,11 @@ class MovieCard extends Component {
     return (
       <Link to={`/movie/${imdbID}`} className={styles.link}>
         <div className={styles.container}>
-          <img className={styles.moviePoster} src={Poster} />
+          <img
+            alt={`Movie poster of ${Title}`}
+            className={styles.moviePoster}
+            src={Poster}
+          />
           <div className={styles.movieInfo}>
             <h2>{`${Title} (${Year})`}</h2>
             <p>{Plot}</p>
