@@ -1,5 +1,5 @@
 import axios from "axios";
-const URL = `http://www.omdbapi.com/`;
+const URL = `https://www.omdbapi.com/`;
 const KEY = "?apikey=aee10107";
 
 const fetchMoviesByPhrase = async (page, searchPhrase) => {
